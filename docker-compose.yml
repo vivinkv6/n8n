@@ -3,21 +3,13 @@ version: "3.8"
 volumes:
   n8n_data:
 
-networks:
-  n8n_internal:
-    driver: bridge
-  postgres_network:
-    external: true
-    name: ${POSTGRES_NETWORK}
-
 services:
 
   n8n:
     image: n8nio/n8n:latest
     restart: unless-stopped
     networks:
-      - n8n_internal
-      - postgres_network
+      - coolify
     ports:
       - "5678:5678"
     volumes:
@@ -66,3 +58,7 @@ services:
     mem_limit: 1200m
     mem_reservation: 768m
     cpus: "0.8"
+
+networks:
+  coolify:
+    external: true
