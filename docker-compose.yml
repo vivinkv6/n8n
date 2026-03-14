@@ -54,7 +54,7 @@ services:
       TZ: ${TIMEZONE}
       N8N_LOG_LEVEL: warn
       NODE_ENV: production
-      NODE_OPTIONS: "--max-old-space-size=900 --gc-interval=100 --max-semi-space-size=64"
+      NODE_OPTIONS: "--max-old-space-size=900 --max-semi-space-size=64"
     mem_limit: 1200m
     mem_reservation: 768m
     cpus: "0.8"
