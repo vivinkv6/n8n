@@ -31,6 +31,15 @@ services:
       WEBHOOK_URL: https://${N8N_HOST}/
       N8N_EDITOR_BASE_URL: https://${N8N_HOST}/
 
+      # SMTP
+      N8N_EMAIL_MODE: smtp
+      N8N_SMTP_HOST: ${SMTP_HOST}
+      N8N_SMTP_PORT: ${SMTP_PORT}
+      N8N_SMTP_USER: ${SMTP_USER}
+      N8N_SMTP_PASS: ${SMTP_PASS}
+      N8N_SMTP_SENDER: ${SMTP_SENDER}
+      N8N_SMTP_SSL: "false"
+
       # Security
       N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY}
       N8N_SECURE_COOKIE: "true"
